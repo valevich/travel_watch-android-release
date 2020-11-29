@@ -279,7 +279,7 @@ class Screen2State extends State<Screen2> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Travel Restrictions'),
+        title: Text('Travel Advisories'),
         backgroundColor: Colors.black87,
       ),
       body: Container(
@@ -287,72 +287,100 @@ class Screen2State extends State<Screen2> {
           child: Column(
             children: [
               SizedBox(height: 10.0),
-              Text(
-                "Extreme Warning (index value: 4.5 - 5)",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.0,
-                    fontFamily: 'Montserrat'),
-              ),
-              SizedBox(height: 5.0),
-              Text(
-                "High Risk (index value: 3.5 - 4.5)",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.0,
-                    fontFamily: 'Montserrat'),
-              ),
-              SizedBox(height: 5.0),
-              Text(
-                "Medium Risk (index value: 2.5 - 3.5)",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.0,
-                    fontFamily: 'Montserrat'),
-              ),
-              SizedBox(height: 5.0),
-              Text(
-                "Low Risk (index value: 0 - 2.5)",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.0,
-                    fontFamily: 'Montserrat'),
-              ),
-              SizedBox(height: 10.0),
-              Divider(color: Colors.black87),
+              // Text(
+              //   "Extreme Warning (index value: 4.5 - 5)",
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 12.0,
+              //       fontFamily: 'Montserrat'),
+              // ),
+              // SizedBox(height: 5.0),
+              // Text(
+              //   "High Risk (index value: 3.5 - 4.5)",
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 12.0,
+              //       fontFamily: 'Montserrat'),
+              // ),
+              // SizedBox(height: 5.0),
+              // Text(
+              //   "Medium Risk (index value: 2.5 - 3.5)",
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 12.0,
+              //       fontFamily: 'Montserrat'),
+              // ),
+              // SizedBox(height: 5.0),
+              // Text(
+              //   "Low Risk (index value: 0 - 2.5)",
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 12.0,
+              //       fontFamily: 'Montserrat'),
+              // ),
 
               Image.network(
                 "https://www.countryflags.io/${widget.isoalpha2}/flat/64.png",
               ),
-
               new Text(widget.name ?? "",
                   style: TextStyle(
                       fontWeight: prefix0.FontWeight.w500, fontSize: 25.0)),
-
               SizedBox(height: 3.0),
               Text(widget.continent ?? ""),
 
-              SizedBox(height: 5.0),
+              // SizedBox(height: 10.0),
               Divider(color: Colors.black87),
+
+              // Image.network(
+              //   "https://www.countryflags.io/${widget.isoalpha2}/flat/64.png",
+              // ),
+
+              // new Text(widget.name ?? "",
+              //     style: TextStyle(
+              //         fontWeight: prefix0.FontWeight.w500, fontSize: 25.0)),
+
+              // SizedBox(height: 3.0),
+              // Text(widget.continent ?? ""),
 
               SizedBox(height: 10.0),
               Text(
                 "Travel Risk Level",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.0,
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 12.0,
                     fontFamily: 'Montserrat'),
               ),
               Center(
                   child: Container(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: Text(widget.score ?? "",
-                          style: TextStyle(fontSize: 15)))),
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          )))),
+
+              // SizedBox(height: 5.0),
+              Divider(color: Colors.black87),
+
+              // SizedBox(height: 10.0),
+              // Text(
+              //   "Travel Risk Level",
+              //   style: TextStyle(
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 16.0,
+              //       fontFamily: 'Montserrat'),
+              // ),
+              // Center(
+              //     child: Container(
+              //         padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+              //         child: Text(widget.score ?? "",
+              //             style: TextStyle(fontSize: 15)))),
 
               // Text("Details",
               //   style: TextStyle(
@@ -364,7 +392,7 @@ class Screen2State extends State<Screen2> {
               Center(
                   child: Container(
                       padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
-                      child: Text(widget.description ?? "",
+                      child: Text(widget.updated ?? "",
                           style: TextStyle(fontSize: 15)))),
             ],
           ),
